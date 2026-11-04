@@ -153,6 +153,55 @@
       font-weight: 600;
       text-align: center;
     }
+     .ceo-photo {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 5px solid #d4a937;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+      display: block;
+      margin: 0 auto;
+    }
+
+    .ribbon {
+      position: relative;
+      display: inline-block;
+      margin-top: -20px;
+      padding: 10px 40px;
+      background-color: #d4a937;
+      color: #12263f;
+      font-family: 'Playfair Display', Georgia, serif;
+      font-weight: 700;
+      font-size: 1.3em;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
+    }
+
+    .ribbon::before,
+    .ribbon::after {
+      content: "";
+      position: absolute;
+      top: 12px;
+      width: 22px;
+      height: 100%;
+      background-color: #a8841f;
+    }
+
+    .ribbon::before {
+      left: -22px;
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 35% 50%);
+    }
+
+    .ribbon::after {
+      right: -22px;
+      clip-path: polygon(0 0, 100% 0, 65% 50%, 100% 100%, 0 100%);
+    }
+
+    .ceo-title {
+      margin: 15px 0 0;
+      font-size: 0.95em;
+      letter-spacing: 1px;
+    }
   </style>
 </head>
 
@@ -194,6 +243,14 @@
         hotel, a tour group, a restaurant, or a nature park, we help you give
         visitors an experience they will remember.
       </p>
+    </div>
+  </section>
+  
+  <section>
+    <div class="content">
+      <img class="ceo-photo" src="Carlos.jpg" alt="CEO of Imperial Nature Services">
+      <div class="ribbon">CEO Name Here</div>
+      <p class="ceo-title">Chief Executive Officer</p>
     </div>
   </section>
 
