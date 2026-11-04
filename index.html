@@ -86,7 +86,7 @@
       margin: 0;
     }
 
-        .gallery {
+    .gallery {
       padding: 50px 20px 0;
     }
 
@@ -96,19 +96,25 @@
       gap: 12px;
     }
 
-    .gallery-grid img {
+    .gallery-grid figure {
+      margin: 0;
       width: 220px;
       max-width: 30%;
+    }
+
+    .gallery-grid img {
+      width: 100%;
       aspect-ratio: 1 / 1;
       object-fit: cover;
       border-radius: 10px;
       display: block;
     }
-    footer {
-      padding: 30px 20px;
+
+    .gallery-grid figcaption {
+      margin-top: 10px;
+      font-size: 0.95em;
+      font-weight: 600;
       text-align: center;
-      font-size: 0.9em;
-      border-top: 1px solid rgba(255, 255, 255, 0.15);
     }
   </style>
 </head>
@@ -121,12 +127,20 @@
       <p>A company focused on teaching you how to serve tourists adequately.</p>
     </div>
   </header>
-
   <div class="gallery">
     <div class="gallery-grid">
-      <img src="Image1.jpg" alt="Student tours">
-      <img src="image2.jpg" alt="Staff training">
-      <img src="image3.jpg" alt="Youth involvement">
+      <figure>
+        <img src="Image1.jpg" alt="Student tours">
+        <figcaption>Student tours</figcaption>
+      </figure>
+      <figure>
+        <img src="Image2.jpg" alt="Staff training">
+        <figcaption>Staff training</figcaption>
+      </figure>
+      <figure>
+        <img src="Image3.jpg" alt="Youth involvement">
+        <figcaption>Youth involvement</figcaption>
+      </figure>
     </div>
   </div>
 
