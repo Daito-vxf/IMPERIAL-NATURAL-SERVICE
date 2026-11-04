@@ -27,8 +27,34 @@
     .fade.visible {
       opacity: 1;
       transform: translateY(0);
+      }
+
+        .topbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 10px 20px;
+      background-color: rgba(18, 38, 63, 0.92);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.15);
     }
 
+    .topbar img {
+      height: 45px;
+      width: auto;
+      display: block;
+    }
+
+    .topbar span {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-weight: 700;
+      font-size: 1.2em;
+    }
+    
     h1, h2 {
       font-family: 'Playfair Display', Georgia, serif;
     }
@@ -131,6 +157,10 @@
 </head>
 
 <body>
+    <div class="topbar">
+    <img src="image2.jpg" alt="Imperial Nature Services logo">
+    <span>Imperial Nature Services</span>
+  </div>
 
   <header>
     <div class="content">
