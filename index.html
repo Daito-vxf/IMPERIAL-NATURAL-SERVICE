@@ -16,6 +16,17 @@
       line-height: 1.7;
       color: #ffffff;
       background-color: #12263f;
+      }
+      
+      .fade {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .fade.visible {
+      opacity: 1;
+      transform: translateY(0);
     }
 
     h1, h2 {
@@ -195,5 +206,17 @@
     <p>&copy; 2026 Imperial Nature Services. All rights reserved.</p>
   </footer>
 
+  <script>
+    const items = document.querySelectorAll('.gallery-grid figure, section');
+    items.forEach(el => el.classList.add('fade'));
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        entry.target.classList.toggle('visible', entry.isIntersecting);
+      });
+    }, { threshold: 0.15 });
+
+    items.forEach(el => observer.observe(el));
+  </script>
 </body>
 </html>
